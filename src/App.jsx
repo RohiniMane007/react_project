@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <h1>My Blog Project</h1>
-      <Footer/>
+      {/* <Footer/> */}
     </>
   )
 }

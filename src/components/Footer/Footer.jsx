@@ -1,5 +1,5 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Logo from '../Logo'
 
 function Footer() {
@@ -24,7 +24,7 @@ function Footer() {
                             <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-gray-500">
                                 Company
                             </h3>
-                            {/* <ul>
+                            <ul>
                                 <li className="mb-4">
                                     <Link
                                         className=" text-base font-medium text-gray-900 hover:text-gray-700"
@@ -57,7 +57,7 @@ function Footer() {
                                         Press Kit
                                     </Link>
                                 </li>
-                            </ul > */}
+                            </ul >
                         </div>
                     </div>
                     <div className="w-full p-6 md:w-1/2 lg:w-2/12">
@@ -65,7 +65,7 @@ function Footer() {
                             <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-gray-500">
                                 Support
                             </h3>
-                            {/* <ul>
+                            <ul>
                                 <li className="mb-4">
                                     <Link
                                         className=" text-base font-medium text-gray-900 hover:text-gray-700"
@@ -98,7 +98,7 @@ function Footer() {
                                         Customer Support
                                     </Link>
                                 </li>
-                            </ul> */}
+                            </ul>
                         </div>
                     </div>
                     <div className="w-full p-6 md:w-1/2 lg:w-3/12">
@@ -106,7 +106,7 @@ function Footer() {
                             <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-gray-500">
                                 Legals
                             </h3>
-                            {/* <ul>
+                            <ul>
                                 <li className="mb-4">
                                     <Link
                                         className=" text-base font-medium text-gray-900 hover:text-gray-700"
@@ -131,7 +131,7 @@ function Footer() {
                                         Licensing
                                     </Link>
                                 </li>
-                            </ul> */}
+                            </ul>
                         </div>
                     </div>
                 </div>
