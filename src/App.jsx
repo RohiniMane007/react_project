@@ -1,15 +1,40 @@
 
+
+import { useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux'
 import './App.css'
-import Footer from './components/Footer/Footer'
+import authService from './appwrite/auth'
+import { login, logout } from './store/authSlice'
+import {Header, Footer} from './components'
+import { Outlet } from 'react-router-dom'
+
 
 function App() {
+  const [loading, setLoading] = useState(true)
+  const dispatch = useDispatch()
 
-  return (
+  useEffect(() => {
+    authService.getCurrentUser()
+      .then((userData) => {
+        if (userData) {
+          dispatch(login({userData}))
+        } else {
+          dispatch(logout())
+        }
+      })
+      .finally(() =>setLoading(false))
+  }, [])
+
+  return !loading ? (
     <>
-      <h1>My Blog Project</h1>
-      {/* <Footer/> */}
+     <div className='min-h-screen flex flex-wrap content-between bg-gray-400'></div>
+     <Header/>
+     <main>
+      TODO: <Outlet/>
+     </main>
+      <Footer/>
     </>
-  )
+  ) :null
 }
 
 export default App
