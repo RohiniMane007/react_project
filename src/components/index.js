@@ -6,6 +6,9 @@ import LogoutBtn from "./Header/LogoutBtn"
 import Input from "./Input";
 import PostCard from "./PostCard";
 import Login from "./Login";
+import RTE from "./RTE";
+import Protected from "./AuthLayout";
+import PostForm from "./post-form/PostForm";
 
 export {
     Header,
@@ -14,5 +17,9 @@ export {
     Logo,
     LogoutBtn,
     Input,
-    PostCard, Login
+    PostCard,
+    Login,
+    RTE,
+    Protected,
+    PostForm
 }
