@@ -34,7 +34,7 @@ function Signup() {
                         <Logo width="100%" />
                     </span>
                 </div>
-                <h2 className="text-center text-2xl font-bold leading-tight">Sign up to create account</h2>
+                <h2 className="text-center text-2xl font-bold leading-tight text-black">Sign up to create account</h2>
                 <p className="mt-2 text-center text-base text-black/60">
                     Already have an account?&nbsp;
                     <Link
@@ -48,15 +48,15 @@ function Signup() {
 
                 <form onSubmit={handleSubmit(create)}>
                     <div className='space-y-5'>
-                        <Input
-                            label="Full Name: "
+                        <Input className="border-1 border-gray-700 text-black"
+                            label="Full Name : "
                             placeholder="Enter your full name"
                             {...register("name", {
                                 required: true,
                             })}
                         />
-                        <Input
-                            label="Email: "
+                        <Input className="border-1 border-gray-700 text-black"
+                            label="Email : "
                             placeholder="Enter your email"
                             type="email"
                             {...register("email", {
@@ -67,8 +67,8 @@ function Signup() {
                                 }
                             })}
                         />
-                        <Input
-                            label="Password: "
+                        <Input className="border-1 border-gray-700 text-black"
+                            label="Password : "
                             type="password"
                             placeholder="Enter your password"
                             {...register("password", {

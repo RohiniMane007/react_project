@@ -9,13 +9,13 @@ const Input = React.forwardRef(function Input({
     const id = useId();
     return (<div className="w-full">
         {label && <label
-            className="inline-block mb-1 pl-1" htmlFor={id}>
+            className="inline-block mb-1 pl-1 text-black" htmlFor={id}>
             {label}
         </label>}
-        <input type={type} className={`${className}`} 
-        ref={ref}
-        {...props}
-        id={id}
+        <input type={type} className={`${className}`}
+            ref={ref}
+            {...props}
+            id={id}
         />
     </div>);
 })
