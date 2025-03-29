@@ -18,6 +18,8 @@ function App() {
         } else {
           dispatch(logout())
         }
+
+        console.log(userData);
       })
       .finally(() => setLoading(false))
   }, [])

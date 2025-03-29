@@ -42,22 +42,20 @@ export class Service {
         try {
 
             await this.databases.deleteDocument(
-                conf.appwriteDatabaseId, 
+                conf.appwriteDatabaseId,
                 conf.appwriteCollectionId,
                 slug)
-                return true;
+            return true;
         } catch (error) {
             return false;
-            // throw error;
-            
         }
 
 
     }
 
-    async getPost(slug){
+    async getPost(slug) {
         try {
-            return await this.databases.getDocument( conf.appwriteDatabaseId, 
+            return await this.databases.getDocument(conf.appwriteDatabaseId,
                 conf.appwriteCollectionId,
                 slug)
         } catch (error) {
@@ -65,9 +63,9 @@ export class Service {
         }
     }
 
-    async getPosts(queries =[Query.equal("status","active")]){
+    async getPosts(queries = [Query.equal("status", "active")]) {
         try {
-            return await this.databases.getDocument( conf.appwriteDatabaseId, 
+            return await this.databases.getDocument(conf.appwriteDatabaseId,
                 conf.appwriteCollectionId,
                 slug)
         } catch (error) {
@@ -75,7 +73,7 @@ export class Service {
         }
     }
 
-    async uploadFile(file){
+    async uploadFile(file) {
         try {
             return await this.bucket.createFile(
                 conf.appwriteBucketId,
@@ -88,7 +86,7 @@ export class Service {
         }
     }
 
-    async deleteFile(fileId){
+    async deleteFile(fileId) {
         try {
             await this.bucket.deleteFile(
                 conf.appwriteBucketId,
@@ -101,7 +99,7 @@ export class Service {
         }
     }
 
-    getFilePreview(fileId){
+    getFilePreview(fileId) {
         return this.bucket.getFilePreview(
             conf.appwriteBucketId,
             fileId
