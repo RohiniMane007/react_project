@@ -19,7 +19,6 @@ function App() {
           dispatch(logout())
         }
 
-        console.log(userData);
       })
       .finally(() => setLoading(false))
   }, [])

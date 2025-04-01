@@ -5,6 +5,15 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(),
-    tailwindcss(),
+  tailwindcss(),
   ],
+  server: {
+    proxy: {
+      '/v1': {
+        target: 'https://cloud.appwrite.io/v1',
+        changeOrigin: true,
+        secure: false,
+      },
+    },
+  }
 })
